@@ -43,6 +43,14 @@ view: orders {
     type: number
     sql: ${user_id} ;;
     value_format : "$#0000"
+    html:
+    {% if value > 1 %}
+    <span style="color:darkgreen;">{{ rendered_value }}</span>
+    {% elsif value > 3 %}
+    <span style="color:goldenrod;">{{ rendered_value }}</span>
+    {% else %}
+    <span style="color:darkred;">{{ rendered_value }}</span>
+    {% endif %} ;;
   }
 
   # ----- Sets of fields for drilling ------
