@@ -34,8 +34,15 @@ view: orders {
   }
 
   measure: count {
-    type: count
+    type: number
     drill_fields: [detail*]
+
+  }
+
+  measure: count1 {
+    type: number
+    sql: ${user_id} ;;
+    value_format : "$#0000"
   }
 
   # ----- Sets of fields for drilling ------
