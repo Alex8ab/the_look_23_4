@@ -44,12 +44,12 @@ view: orders {
     sql: ${user_id} ;;
     value_format : "$#0000"
     html:
-    {% if value > 1 %}
+    {% if value == 0 %}
     <span style="color:darkgreen;">{{ rendered_value }}</span>
-    {% elsif value > 3 %}
+    {% elsif value > 1 %}
     <span style="color:goldenrod;">{{ rendered_value }}</span>
-    {% else %}
-    <span style="color:darkred;">{{ rendered_value }}</span>
+      {% else %}
+    <div style="color: blue; font-size:100%; text-align:right">{{ rendered_value }}</div>
     {% endif %} ;;
   }
 
