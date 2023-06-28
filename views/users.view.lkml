@@ -11,17 +11,41 @@ view: users {
   dimension: age {
     type: number
     sql: ${TABLE}.age ;;
+    html:
+    {% if value > 18 %}
+    <span style="color:darkgreen;">{{ rendered_value }}</span>
+    {% elsif value > 25 %}
+    <span style="color:goldenrod;">{{ rendered_value }}</span>
+    {% else %}
+    <div style="color: blue; font-size:100%; text-align:right">{{ rendered_value }}</div>
+    {% endif %} ;;
   }
 
   dimension: city {
     type: string
     sql: ${TABLE}.city ;;
+    html:
+    {% if value == "Angola" %}
+    <span style="color:darkgreen;">{{ rendered_value }}</span>
+    {% elsif value =="Aurora" %}
+    <span style="color:goldenrod;">{{ rendered_value }}</span>
+    {% else %}
+    <div style="color: blue; font-size:100%; text-align:right">{{ rendered_value }}</div>
+    {% endif %} ;;
   }
 
   dimension: country {
     type: string
     map_layer_name: countries
     sql: ${TABLE}.country ;;
+    html:
+    {% if value == "USA" %}
+    <span style="color:darkgreen;">{{ rendered_value }}</span>
+    {% elsif value =="INDIA" %}
+    <span style="color:goldenrod;">{{ rendered_value }}</span>
+    {% else %}
+    <div style="color: blue; font-size:100%; text-align:right">{{ rendered_value }}</div>
+    {% endif %} ;;
   }
 
   dimension_group: created {

@@ -6,6 +6,14 @@ view: orders {
     primary_key: yes
     type: number
     sql: ${TABLE}.id ;;
+    html:
+    {% if value >= 5 %}
+    <span style="color:darkgreen;">{{ rendered_value }}</span>
+    {% elsif value > 100 %}
+    <span style="color:goldenrod;">{{ rendered_value }}</span>
+    {% else %}
+    <div style="color: blue; font-size:100%; text-align:right">{{ rendered_value }}</div>
+    {% endif %} ;;
   }
 
   dimension_group: created {
