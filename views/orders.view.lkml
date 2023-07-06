@@ -8,11 +8,11 @@ view: orders {
     sql: ${TABLE}.id ;;
     html:
     {% if value >= 5 %}
-    <span style="color:darkgreen;">{{ rendered_value }}</span>
+    <div style="color: #FFFFFF; font-size:100%; text-align:right; font-weight: bold; background-color:#595959">{{ rendered_value }}</div>
     {% elsif value > 100 %}
-    <span style="color:goldenrod;">{{ rendered_value }}</span>
+    <div style="color: #CD5C5C; font-size:100%; text-align:right; font-weight: bold; background-color:#595959">{{ rendered_value }}</div>
     {% else %}
-    <div style="color: blue; font-size:100%; text-align:right">{{ rendered_value }}</div>
+    <div style="color: #F08080; font-size:100%; text-align:right; font-weight: bold; background-color:#595959">{{ rendered_value }}</div>
     {% endif %} ;;
   }
 
@@ -52,12 +52,12 @@ view: orders {
     sql: ${user_id} ;;
     value_format : "$#0000"
     html:
-    {% if value == 0 %}
-    <span style="color:darkgreen;">{{ rendered_value }}</span>
-    {% elsif value > 1 %}
-    <span style="color:goldenrod;">{{ rendered_value }}</span>
-      {% else %}
-    <div style="color: blue; font-size:100%; text-align:right">{{ rendered_value }}</div>
+   {% if value >= 5 %}
+    <div style="color: #FFFFFF; font-size:100%; text-align:right; font-weight: bold; background-color:#595959">{{ rendered_value }}</div>
+    {% elsif value > 100 %}
+    <div style="color: #CD5C5C; font-size:100%; text-align:right; font-weight: bold; background-color:#595959">{{ rendered_value }}</div>
+    {% else %}
+    <div style="color: #F08080; font-size:100%; text-align:right; font-weight: bold; background-color:#595959">{{ rendered_value }}</div>
     {% endif %} ;;
   }
 

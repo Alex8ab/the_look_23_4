@@ -13,11 +13,11 @@ view: users {
     sql: ${TABLE}.age ;;
     html:
     {% if value > 18 %}
-    <span style="color:darkgreen;">{{ rendered_value }}</span>
+    <div style="color: #FFFFFF; font-size:100%; text-align:right; font-weight: bold; background-color:#595959">{{ rendered_value }}</div>
     {% elsif value > 25 %}
-    <span style="color:goldenrod;">{{ rendered_value }}</span>
+    <div style="color: #CD5C5C; font-size:100%; text-align:right; font-weight: bold; background-color:#595959">{{ rendered_value }}</div>
     {% else %}
-    <div style="color: blue; font-size:100%; text-align:right">{{ rendered_value }}</div>
+    <div style="color: #F08080; font-size:100%; text-align:right; font-weight: bold; background-color:#595959">{{ rendered_value }}</div>
     {% endif %} ;;
   }
 
@@ -26,11 +26,11 @@ view: users {
     sql: ${TABLE}.city ;;
     html:
     {% if value == "Angola" %}
-    <span style="color:darkgreen;">{{ rendered_value }}</span>
+    <div style="color: #FFFFFF; font-size:100%; text-align:right; font-weight: bold; background-color:#595959">{{ rendered_value }}</div>
     {% elsif value =="Aurora" %}
-    <span style="color:goldenrod;">{{ rendered_value }}</span>
+    <div style="color: #CD5C5C; font-size:100%; text-align:right; font-weight: bold; background-color:#595959">{{ rendered_value }}</div>
     {% else %}
-    <div style="color: blue; font-size:100%; text-align:right">{{ rendered_value }}</div>
+    <div style="color: #F08080; font-size:100%; text-align:right; font-weight: bold; background-color:#595959">{{ rendered_value }}</div>
     {% endif %} ;;
   }
 
